@@ -20,6 +20,7 @@ namespace UserRegistrationProblems
                     "3.Check validation for Email Id\n" +
                     "4.Check validation for Mobile Number\n" +
                     "5.Check validation for Password Rule1\n" +
+                    "6.Check validation for Password Rule2\n" +
                     "10.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -73,9 +74,20 @@ namespace UserRegistrationProblems
                         string code4 = Pattern.pattern = "^[a-zA-Z0-9]{8,}$";//jyoti1ra
                         Console.WriteLine("Enter password want to check for minimum 8 Characters:");
                         string pasword1 = Console.ReadLine();
-                        Console.WriteLine("\nList of valid and Invalid email id:\n-------------------------------------");
+                        Console.WriteLine("\nList of valid and Invalid password:\n-------------------------------------");
                         Pattern pattern4 = new Pattern();
                         pattern4.ValidatePattern(pasword1, code4);
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        string code5 = Pattern.pattern = "^[a-zA-Z0-9]{8,}$";//Jyoti1ra
+                        Console.WriteLine("Enter password want to check at least 1 Upper Case:");
+                        string pasword2 = Console.ReadLine();
+                        Console.WriteLine("\nList of valid and Invalid email id:\n-------------------------------------");
+                        Pattern pattern5 = new Pattern();
+                        pattern5.ValidatePattern(pasword2, code5);
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
