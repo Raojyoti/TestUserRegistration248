@@ -9,7 +9,6 @@ namespace UserRegistrationProblems
 {
     public class Pattern
     {
-        //UC1-First name starts with Cap and has minimum 3 characters
         public static string pattern ;
 
         /// <summary>

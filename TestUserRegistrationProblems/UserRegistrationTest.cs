@@ -10,10 +10,12 @@ namespace TestUserRegistrationProblems
         /// <summary>
         ///  UC1-First name starts with Capital and has minimum 3 characters
         ///  UC2-First name starts with Capital and has minimum 3 characters
+        ///  UC3-Email has 3 mandatory parts (abc, bl & co) and 2 optional(xyz & in) with precise @ and.positions
         /// </summary>
         [TestMethod]
         [DataRow("^[A-Z]{1}[a-z]{2,}$","Rahul","Valid")]
         [DataRow("^[A-Z]{1}[a-z]{2,}$", "Sharma", "Valid")]
+        [DataRow(@"^([abc]+)(\.[a-z0-9_\+\-]+)?@([bl]+)\.([co]{2,4})(\.[a-z]{2,})?$", "abc.xyz@bl.co.in", "Valid")]
         public void CheckValidationForUserEnterenValue(string pattern, string input, string excepted)
         {
             //AAA

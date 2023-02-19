@@ -25,9 +25,31 @@ namespace UserRegistrationProblems
                         string code = Pattern.pattern= "^[A-Z]{1}[a-z]{2,}$";
                         Console.WriteLine("Enter first name want to check for validation:");
                         string name = Console.ReadLine();
-                        Console.WriteLine("\n of valid and Invalid FirstName:\n-------------------------------------");
+                        Console.WriteLine("\nList of valid and Invalid FirstName:\n-------------------------------------");
                         Pattern pattern = new Pattern();
                         pattern.ValidatePattern(name, code);
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        string code1 = Pattern.pattern = "^[A-Z]{1}[a-z]{2,}$";
+                        Console.WriteLine("Enter last name want to check for validation:");
+                        string lastName = Console.ReadLine();
+                        Console.WriteLine("\nList of valid and Invalid LastName:\n-------------------------------------");
+                        Pattern pattern1 = new Pattern();
+                        pattern1.ValidatePattern(lastName, code1);
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        string code2 = Pattern.pattern = @"^([abc]+)(\.[a-z0-9_\+\-]+)?@([bl]+)\.([co]{2,4})(\.[a-z]{2,})?$";//abc.xyz@bl.co.in;
+                        Console.WriteLine("Enter emailid want to check for validation:");
+                        string emailId = Console.ReadLine();
+                        Console.WriteLine("\nList of valid and Invalid LastName:\n-------------------------------------");
+                        Pattern pattern2 = new Pattern();
+                        pattern2.ValidatePattern(emailId, code2);
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
