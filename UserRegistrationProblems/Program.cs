@@ -22,6 +22,7 @@ namespace UserRegistrationProblems
                     "5.Check validation for Password Rule1\n" +
                     "6.Check validation for Password Rule2\n" +
                     "7.Check validation for Password Rule3\n" +
+                    "8.Check validation for Password Rule3\n" +
                     "10.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -86,7 +87,7 @@ namespace UserRegistrationProblems
                         string code5 = Pattern.pattern = "^(?=.*[A-Z])[A-Za-z0-9]{8,}$";//Jyoti1ra
                         Console.WriteLine("Enter password want to check at least 1 Upper Case:");
                         string pasword2 = Console.ReadLine();
-                        Console.WriteLine("\nList of valid and Invalid email id:\n-------------------------------------");
+                        Console.WriteLine("\nList of valid and Invalid password: \n-------------------------------------");
                         Pattern pattern5 = new Pattern();
                         pattern5.ValidatePattern(pasword2, code5);
                         Console.Write("\nPress any key to continue...... ");
@@ -94,12 +95,23 @@ namespace UserRegistrationProblems
                         break;
                     case 7:
                         Console.Clear();
-                        string code6 = Pattern.pattern = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";//Ritesh
+                        string code6 = Pattern.pattern = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$";//Piyush1ra
                         Console.WriteLine("Enter password want to check at least 1 numeric number:");
                         string pasword3 = Console.ReadLine();
-                        Console.WriteLine("\nList of valid and Invalid email id:\n-------------------------------------");
+                        Console.WriteLine("\nList of valid and Invalid password:\n-------------------------------------");
                         Pattern pattern6 = new Pattern();
                         pattern6.ValidatePattern(pasword3, code6);
+                        Console.Write("\nPress any key to continue...... ");
+                        Console.ReadLine();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        string code7 = Pattern.pattern = @"^[a-zA-Z0-9]?[~`!@#$%^&*()-_+={}[]|\;:""<>,./?]{1,8}$";//P*iyush1ra
+                        Console.WriteLine("Enter password want to check at least 1 numeric number:");
+                        string pasword4 = Console.ReadLine();
+                        Console.WriteLine("\nList of valid and Invalid password:\n-------------------------------------");
+                        Pattern pattern7 = new Pattern();
+                        pattern7.ValidatePattern(pasword4, code7);
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
