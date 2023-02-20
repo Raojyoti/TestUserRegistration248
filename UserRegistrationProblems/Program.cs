@@ -23,7 +23,6 @@ namespace UserRegistrationProblems
                     "6.Check validation for Password Rule2\n" +
                     "7.Check validation for Password Rule3\n" +
                     "8.Check validation for Password Rule3\n" +
-                    "9.Check validation for All email id\n" +
                     "10.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -107,8 +106,8 @@ namespace UserRegistrationProblems
                         break;
                     case 8:
                         Console.Clear();
-                        string code7 = Pattern.pattern = @"^[a-zA-Z0-9]?[~`!@#$%^&*()-_+={}[]|\;:""<>,./?]{1,8}$";//P*iyush1ra
-                        Console.WriteLine("Enter password want to check at least 1 numeric number:");
+                        string code7 = Pattern.pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";//P*iyush1ra//* for all . for atleast ?= must match the atleast condition
+                        Console.WriteLine("Enter password want to check at least 1 special characters:");
                         string pasword4 = Console.ReadLine();
                         Console.WriteLine("\nList of valid and Invalid password:\n-------------------------------------");
                         Pattern pattern7 = new Pattern();
@@ -116,19 +115,9 @@ namespace UserRegistrationProblems
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
-                    case 9:
-                        Console.Clear();
-                        string code8 = Pattern.pattern = @"^[a-zA-Z0-9]?[~`!@#$%^&*()-_+={}[]|\;:""<>,./?]{1,8}$";//abc-100@yahoo.com
-                        Console.WriteLine("Enter password want to check at least 1 numeric number:");
-                        string pasword5 = Console.ReadLine();
-                        Console.WriteLine("\nList of valid and Invalid sample email id:\n-------------------------------------");
-                        Pattern pattern8 = new Pattern();
-                        pattern8.ValidatePattern(pasword5, code8);
-                        Console.Write("\nPress any key to continue...... ");
-                        Console.ReadLine();
-                        break;
                     case 10:
                         Console.Clear();
+                        Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
                     default:
