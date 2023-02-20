@@ -15,7 +15,7 @@ namespace TestUserRegistrationProblems
         ///  UC5-Password Rule1– minimum 8 Characters.
         ///  UC6-Password Rule2– Should have at least 1 Upper Case.
         ///  UC7-Password Rule3– Should  have at least 1 numeric number.
-        ///  UC8-Password Rule3– Has  exactly 1 Special Characters.
+        ///  UC8-Password Rule4– Should have at least 1 Special Characters.
         ///  UC9-Sample Emails to Test
         /// </summary>
         [TestMethod]
@@ -24,9 +24,9 @@ namespace TestUserRegistrationProblems
         [DataRow(@"^([abc]+)(\.[a-z0-9_\+\-]+)?@([bl]+)\.([co]{2,4})(\.[a-z]{2,})?$", "abc.xyz@bl.co.in", "Valid")]
         [DataRow("^[1-9]{2}?([ ])[0-9]{10}$", "91 9919819801", "Valid")]
         [DataRow("^[a-zA-Z0-9]{8,}$", "jyoti1ra", "Valid")]
-        [DataRow("^(?=.*[A-Z])[A-Za-z0-9]{8,}$", "Ritesh1ra", "Valid")]
+        [DataRow("^(?=.*[A-Z])[A-Za-z0-9]{8,}$", "Riteshra", "Valid")]
         [DataRow("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$", "Piyush1ra", "Valid")]
-        [DataRow(@"^[a-zA-Z0-9][~`!@#$%^&*()-_+={}[]|\;:""<>,./?]{7,}$", "P*iyush1ra", "Valid")]//*P*iyush1ra=false
+        [DataRow("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", "P*iyush1ra", "Valid")]//Piyush1ra=false
         [DataRow(@"^([a-z0-9\.\-]+)?@([a-z0-9]+)\.([a-z\,\.]+)$", "abc-100@yahoo.com", "Valid")]
         public void CheckValidationForUserEnterenValue(string pattern, string input, string excepted)
         {

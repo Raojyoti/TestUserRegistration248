@@ -107,8 +107,8 @@ namespace UserRegistrationProblems
                         break;
                     case 8:
                         Console.Clear();
-                        string code7 = Pattern.pattern = @"^[a-zA-Z0-9]?[~`!@#$%^&*()-_+={}[]|\;:""<>,./?]{1,8}$";//P*iyush1ra
-                        Console.WriteLine("Enter password want to check at least 1 numeric number:");
+                        string code7 = Pattern.pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";//P*iyush1ra
+                        Console.WriteLine("Enter password want to check at least 1 special characters:");
                         string pasword4 = Console.ReadLine();
                         Console.WriteLine("\nList of valid and Invalid password:\n-------------------------------------");
                         Pattern pattern7 = new Pattern();
@@ -118,8 +118,8 @@ namespace UserRegistrationProblems
                         break;
                     case 9:
                         Console.Clear();
-                        string code8 = Pattern.pattern = @"^[a-zA-Z0-9]?[~`!@#$%^&*()-_+={}[]|\;:""<>,./?]{1,8}$";//abc-100@yahoo.com
-                        Console.WriteLine("Enter password want to check at least 1 numeric number:");
+                        string code8 = Pattern.pattern = @"^([a-z0-9\.\-]+)?@([a-z0-9]+)\.([a-z\,\.]+)$";//abc-100@yahoo.com
+                        Console.WriteLine("Enter email id want to check all email sample:");
                         string pasword5 = Console.ReadLine();
                         Console.WriteLine("\nList of valid and Invalid sample email id:\n-------------------------------------");
                         Pattern pattern8 = new Pattern();
