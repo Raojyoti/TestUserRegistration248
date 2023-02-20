@@ -23,6 +23,7 @@ namespace UserRegistrationProblems
                     "6.Check validation for Password Rule2\n" +
                     "7.Check validation for Password Rule3\n" +
                     "8.Check validation for Password Rule3\n" +
+                    "9.Check validation for sample email id \n" +
                     "10.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -106,11 +107,7 @@ namespace UserRegistrationProblems
                         break;
                     case 8:
                         Console.Clear();
-<<<<<<< HEAD
-                        string code7 = Pattern.pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";//P*iyush1ra//* for all . for atleast ?= must match the atleast condition
-=======
                         string code7 = Pattern.pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";//P*iyush1ra
->>>>>>> UC9-TestAllSampleEmailIdValidation
                         Console.WriteLine("Enter password want to check at least 1 special characters:");
                         string pasword4 = Console.ReadLine();
                         Console.WriteLine("\nList of valid and Invalid password:\n-------------------------------------");
@@ -119,8 +116,6 @@ namespace UserRegistrationProblems
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
-<<<<<<< HEAD
-=======
                     case 9:
                         Console.Clear();
                         string code8 = Pattern.pattern = @"^([a-z0-9\.\-]+)?@([a-z0-9]+)\.([a-z\,\.]+)$";//abc-100@yahoo.com
@@ -132,7 +127,6 @@ namespace UserRegistrationProblems
                         Console.Write("\nPress any key to continue...... ");
                         Console.ReadLine();
                         break;
->>>>>>> UC9-TestAllSampleEmailIdValidation
                     case 10:
                         Console.Clear();
                         Console.Write("\nPress any key to continue...... ");
